@@ -1,0 +1,33 @@
+{
+  "name": "greeter",
+  "version": "1.0.0",
+  "description": "This sample shows basic class definition and instantiation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build:ts": "tsc",
+    "build": "run-p build:*",
+    "watch:ts": "npm run build:ts -- -w",
+    "watch": "run-p watch:*",
+    "server": "nodemon build/app.js -w build",
+    "prestart": "npm run build -s",
+    "start": "run-p -s watch server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^3.2.2",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "nodemon": "^1.9.2",
+    "npm-run-all": "^2.2.0",
+    "rimraf": "^2.5.2",
+    "tslint-config-standard": "^1.3.0",
+    "typescript": "^1.8.10"
+  },
+  "dependencies": {}
+}
