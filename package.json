@@ -1,7 +1,7 @@
 {
-  "name": "greeter",
+  "name": "cue-node",
   "version": "1.0.0",
-  "description": "This sample shows basic class definition and instantiation.",
+  "description": "Write Messages to Corsair RGB Keyboards",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "cue-sdk-node": "^1.2.0",
+    "lodash": "^4.14.1",
     "vorpal": "^1.11.4"
   }
 }

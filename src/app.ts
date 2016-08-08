@@ -1,18 +1,17 @@
 const vorpal = require('vorpal')()
 import CueMessage from './cue'
 
-
 const cueMessage = new CueMessage()
 
 vorpal
   .command('msg <message...>', `Sends Message to Server "".`)
   .action((args) => {
     return new Promise((resolve, reject) => {
-      const { options, message } = args
+      const { message } = args
       const messageString = message.join(' ')
-      cueMessage.addMessage(messageString)
-      vorpal.activeCommand.log('bar', options, message)
-      resolve()
+      const cuePromise = cueMessage.addMessage(messageString)
+      vorpal.activeCommand.log('Printing message...')
+      cuePromise.then(() => resolve())
     })
   })
 
