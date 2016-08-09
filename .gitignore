@@ -4,4 +4,5 @@ build
 node_modules/*
 !node_modules/cue-sdk-node/
 !node_modules/bindings/
+!assets/*
 typings

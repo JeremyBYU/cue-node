@@ -13,12 +13,15 @@
     "watch": "run-p watch:*",
     "server": "nodemon build/app.js -w build",
     "prestart": "npm run build -s",
-    "start": "run-p -s watch server"
+    "start": "run-p -s watch server",
+    "prerelease": "npm run build -s",
+    "release": "enclose -o cue_node.exe build/app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^6.0.4",
+    "enclose": "^2.2.0",
     "eslint": "^3.2.2",
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.1",
