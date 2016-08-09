@@ -25,3 +25,13 @@ Visual Studio Code:
 ```
 Run build task: ctrl+shit+b
 ```
+
+
+## Notes
+
+I modified the following files
+ * cue-sdk-node/index.js -- reference the CUE DLL without __dirname
+ * binding/binding.js  -- reference binding.node
+
+Created
+ * assets directory with dll and bindings

@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io/api/node
 build
 # Dependency directories
-node_modules
+node_modules/*
+!node_modules/cue-sdk-node/
+!node_modules/bindings/
 typings
